@@ -1,0 +1,8 @@
+{
+  "has_registration_variant": true,
+  "has_medicalnet_variant": false,
+  "has_model_genesis_variant": false,
+  "n_rows": 1362,
+  "n_individual_models": 6,
+  "n_ensembles": 6
+}

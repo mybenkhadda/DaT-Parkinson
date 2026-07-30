@@ -1,0 +1,42 @@
+[23:20:32] Loading cv_folds.csv (existing split, not re-derived)
+[23:20:32] Building fixed template from 60 training-only examinations
+[23:20:33] Template built from 60 examinations
+[23:20:33] Registering all 1362 volumes to the template (rigid, linear interpolation)
+[23:21:53]   registered 200/1362 (80s elapsed, 0.40s/scan, 0 failures so far)
+[23:22:47]   registered 400/1362 (134s elapsed, 0.33s/scan, 0 failures so far)
+[23:24:16]   registered 600/1362 (222s elapsed, 0.37s/scan, 4 failures so far)
+[23:26:32]   registered 800/1362 (359s elapsed, 0.45s/scan, 13 failures so far)
+[23:28:59]   registered 1000/1362 (506s elapsed, 0.51s/scan, 14 failures so far)
+[23:30:01]   registered 1200/1362 (568s elapsed, 0.47s/scan, 14 failures so far)
+[23:30:59] Registration complete: 1362 volumes in 626s (0.46s/scan average), 14 failures (1.0%)
+[23:30:59] Retraining XGBoost / logistic regression / linear SVM on registered features (5-fold OOF)
+[23:31:00] Done. Summary:
+[23:31:00] {
+  "n_registered": 1362,
+  "n_registration_failures": 14,
+  "registration_failure_rate": 0.010279001468428781,
+  "registration_runtime_seconds": 625.9879388809204,
+  "metrics": {
+    "path_a_registered_xgb": {
+      "log_loss": 0.7235072971674369,
+      "auroc": 0.6038223354121092,
+      "brier": 0.2581113794182753,
+      "sensitivity": 0.570281124497992,
+      "specificity": 0.5739837398373984
+    },
+    "path_a_registered_logreg": {
+      "log_loss": 0.7194774398292465,
+      "auroc": 0.5535551419771225,
+      "brier": 0.2578609451943055,
+      "sensitivity": 0.6572958500669344,
+      "specificity": 0.43089430894308944
+    },
+    "path_a_registered_svm": {
+      "log_loss": 0.6999750346520746,
+      "auroc": 0.5279089256756022,
+      "brier": 0.25271946696347003,
+      "sensitivity": 0.6506024096385542,
+      "specificity": 0.3886178861788618
+    }
+  }
+}

@@ -1,0 +1,35 @@
+[23:23:22] Weight provenance: {
+  "source_repo": "https://github.com/Tencent/MedicalNet",
+  "weight_file": "resnet_18_23dataset.pth",
+  "downloaded_from": "https://huggingface.co/TencentMedicalNet/MedicalNet-Resnet18",
+  "license": "MIT",
+  "sha256": "61224f9317fcce873366deb3703183e92cc47325b726b69691b33536244e10f4",
+  "architecture": "ResNet-18 (BasicBlock, shortcut_type='A' parameter-free), verified: 0 unexpected keys, only fc.weight/fc.bias missing on load",
+  "backbone_lr": 0.0001,
+  "head_lr": 0.001
+}
+[23:24:39]   [MedicalNet fold 0] epoch 00  train_loss=0.7006  val_loss=0.6083  val_auroc=0.7592  (73.8s)  *best*
+[23:25:51]   [MedicalNet fold 0] epoch 01  train_loss=0.6025  val_loss=1.0102  val_auroc=0.7715  (71.1s)
+[23:27:01]   [MedicalNet fold 0] epoch 02  train_loss=0.5613  val_loss=0.5130  val_auroc=0.8109  (70.4s)  *best*
+[23:28:12]   [MedicalNet fold 0] epoch 03  train_loss=0.5338  val_loss=1.6843  val_auroc=0.7402  (70.4s)
+[23:29:20]   [MedicalNet fold 0] epoch 04  train_loss=0.5205  val_loss=0.5109  val_auroc=0.8305  (68.3s)  *best*
+[23:30:25]   [MedicalNet fold 0] epoch 05  train_loss=0.5076  val_loss=0.6261  val_auroc=0.7941  (64.5s)
+[23:31:23]   [MedicalNet fold 0] epoch 06  train_loss=0.4713  val_loss=1.3353  val_auroc=0.7980  (58.5s)
+[23:32:10]   [MedicalNet fold 0] epoch 07  train_loss=0.4987  val_loss=0.5919  val_auroc=0.8182  (47.1s)
+[23:32:57]   [MedicalNet fold 0] epoch 08  train_loss=0.4746  val_loss=0.5093  val_auroc=0.8393  (46.9s)  *best*
+[23:33:44]   [MedicalNet fold 0] epoch 09  train_loss=0.4582  val_loss=0.6392  val_auroc=0.8212  (47.1s)
+[23:34:34]   [MedicalNet fold 0] epoch 10  train_loss=0.4272  val_loss=0.4856  val_auroc=0.8437  (49.5s)  *best*
+[23:35:21]   [MedicalNet fold 0] epoch 11  train_loss=0.4381  val_loss=0.5778  val_auroc=0.8269  (46.5s)
+[23:36:08]   [MedicalNet fold 0] epoch 12  train_loss=0.4137  val_loss=0.5648  val_auroc=0.8381  (47.9s)
+[23:36:55]   [MedicalNet fold 0] epoch 13  train_loss=0.4169  val_loss=0.5925  val_auroc=0.8138  (46.4s)
+[23:37:41]   [MedicalNet fold 0] epoch 14  train_loss=0.4312  val_loss=0.4990  val_auroc=0.8380  (45.8s)
+[23:38:27]   [MedicalNet fold 0] epoch 15  train_loss=0.4029  val_loss=0.6935  val_auroc=0.8294  (46.5s)
+[23:39:13]   [MedicalNet fold 0] epoch 16  train_loss=0.4224  val_loss=0.5060  val_auroc=0.8296  (46.0s)
+[23:39:13]   [MedicalNet fold 0] early stopping at epoch 16 (best=10)
+[23:39:13] Fold 0 done in 951s (best epoch 10, val_loss=0.4856)
+[23:40:16]   [MedicalNet fold 1] epoch 00  train_loss=0.6773  val_loss=0.5817  val_auroc=0.7107  (58.9s)  *best*
+[23:41:15]   [MedicalNet fold 1] epoch 01  train_loss=0.5937  val_loss=0.6893  val_auroc=0.7878  (59.4s)
+[23:42:16]   [MedicalNet fold 1] epoch 02  train_loss=0.5655  val_loss=0.5618  val_auroc=0.7777  (60.7s)  *best*
+[23:43:15]   [MedicalNet fold 1] epoch 03  train_loss=0.5467  val_loss=2.4279  val_auroc=0.7418  (58.6s)
+[23:44:12]   [MedicalNet fold 1] epoch 04  train_loss=0.5216  val_loss=0.4456  val_auroc=0.8507  (57.5s)  *best*
+[23:45:11]   [MedicalNet fold 1] epoch 05  train_loss=0.4831  val_loss=0.9041  val_auroc=0.8410  (58.7s)

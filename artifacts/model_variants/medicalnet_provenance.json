@@ -1,0 +1,13 @@
+{
+  "source_repo": "https://github.com/Tencent/MedicalNet",
+  "weight_file": "resnet_18_23dataset.pth",
+  "downloaded_from": "https://huggingface.co/TencentMedicalNet/MedicalNet-Resnet18",
+  "license": "MIT",
+  "sha256": "61224f9317fcce873366deb3703183e92cc47325b726b69691b33536244e10f4",
+  "architecture": "ResNet-18 (BasicBlock, shortcut_type='A' parameter-free), verified: 0 unexpected keys, only fc.weight/fc.bias missing on load",
+  "backbone_lr": 0.0001,
+  "head_lr": 0.001,
+  "fold_timing_seconds": {
+    "0": 951.1432702541351
+  }
+}

@@ -1,0 +1,33 @@
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+.venv_ml/
+*.egg-info/
+
+# --- Competition / research data (large, and/or provided under the
+# competition's own data-usage terms -- not redistributed via this repo).
+# On Colab, mount Google Drive and point the notebooks at your own copy. ---
+niftis/
+preproc_cache/
+data-demo/
+smoke_test_data_2gePzfM.tar.gz
+train_labels_JNDlMjr.csv
+
+# --- Large / regenerable model artifacts (per-fold checkpoints, external
+# pretrained weights, scratch caches). Final small artifacts (calibrator,
+# ensemble weights, OOF predictions, configs, plots) ARE tracked -- see the
+# explicit !-exceptions below. ---
+artifacts/pretrained_weights/
+artifacts/research_extension_cache/
+artifacts/model_variants/*.pt
+artifacts/path_b_fold*.pt
+artifacts/path_c_fold*.pt
+
+# --- Build outputs / local scratch ---
+submission.zip
+eda_outputs/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db

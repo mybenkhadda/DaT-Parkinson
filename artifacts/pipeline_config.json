@@ -1,0 +1,80 @@
+{
+  "final_model_name": "Weighted average (optimized)",
+  "final_model_col": "oof_pred_weighted_average_optimized",
+  "final_calibration_method": "none",
+  "base_models_enabled": {
+    "path_a": true,
+    "path_b": true,
+    "path_c": true
+  },
+  "base_model_names": [
+    "Path A (handcrafted + GBM)",
+    "Path B (2.5D CNN)",
+    "Path C (3D CNN)"
+  ],
+  "base_model_cols": [
+    "oof_pred_a",
+    "oof_pred_b",
+    "oof_pred_c"
+  ],
+  "gbm_backend": "xgboost",
+  "cnn25d_backbone": "resnet18",
+  "n_slices_25d": 9,
+  "preprocessing_config": {
+    "target_spacing_mm": 2.9,
+    "crop_size": 64,
+    "centroid_threshold_pct": 0.4,
+    "intensity_p_low": 1,
+    "intensity_p_high": 99
+  },
+  "preprocessing_version_hash": "f84f2b8d5a9e",
+  "cv_strategy": "StratifiedGroupKFold",
+  "n_folds": 5,
+  "seed": 42,
+  "artifacts": {
+    "path_a": "c:\\Users\\myben\\OneDrive\\Documents\\GitHub\\DaT-Parkinson\\artifacts\\final_feature_model.joblib",
+    "path_b": "c:\\Users\\myben\\OneDrive\\Documents\\GitHub\\DaT-Parkinson\\artifacts\\final_25d_model.pt",
+    "path_c": "c:\\Users\\myben\\OneDrive\\Documents\\GitHub\\DaT-Parkinson\\artifacts\\final_3d_model.pt"
+  },
+  "final_calibrator_path": "c:\\Users\\myben\\OneDrive\\Documents\\GitHub\\DaT-Parkinson\\artifacts\\final_calibrator.joblib",
+  "final_ensemble_path": "c:\\Users\\myben\\OneDrive\\Documents\\GitHub\\DaT-Parkinson\\artifacts\\final_ensemble.joblib",
+  "feature_columns": [
+    "total_uptake",
+    "mean_uptake",
+    "max_uptake",
+    "intensity_p50",
+    "intensity_p90",
+    "intensity_p99",
+    "high_intensity_voxel_volume_mm3",
+    "reference_mean_uptake",
+    "left_uptake",
+    "left_max",
+    "left_high_intensity_volume_mm3",
+    "right_uptake",
+    "right_max",
+    "right_high_intensity_volume_mm3",
+    "asymmetry_index",
+    "bilateral_uptake_ratio",
+    "axial_position_of_peak_uptake",
+    "weighted_centroid_x",
+    "weighted_centroid_y",
+    "weighted_centroid_z",
+    "sagittal_centroid",
+    "coronal_centroid",
+    "uptake_spread_x",
+    "uptake_spread_y",
+    "uptake_spread_z",
+    "connected_component_count",
+    "left_right_component_distance_mm",
+    "left_elongation",
+    "left_compactness",
+    "right_elongation",
+    "right_compactness",
+    "central_to_background_ratio",
+    "sbr_left",
+    "sbr_right",
+    "sbr_mean",
+    "putamen_caudate_ratio_left",
+    "putamen_caudate_ratio_right"
+  ]
+}

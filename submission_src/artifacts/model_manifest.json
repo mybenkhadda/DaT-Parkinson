@@ -1,0 +1,40 @@
+{
+  "final_model_name": "Weighted average (optimized)",
+  "final_model_col": "oof_pred_weighted_average_optimized",
+  "final_calibration_method": "none",
+  "base_models_enabled": {
+    "path_a": false,
+    "path_b": true,
+    "path_c": true
+  },
+  "base_model_names": [
+    "Path B (2.5D CNN)",
+    "Path C (3D CNN)"
+  ],
+  "base_model_cols": [
+    "oof_pred_b",
+    "oof_pred_c"
+  ],
+  "gbm_backend": null,
+  "cnn25d_backbone": "resnet18",
+  "n_slices_25d": 9,
+  "preprocessing_config": {
+    "target_spacing_mm": 2.9,
+    "crop_size": 64,
+    "centroid_threshold_pct": 0.4,
+    "intensity_p_low": 1,
+    "intensity_p_high": 99
+  },
+  "preprocessing_version_hash": "f84f2b8d5a9e",
+  "cv_strategy": "StratifiedGroupKFold",
+  "n_folds": 5,
+  "seed": 42,
+  "artifacts": {
+    "path_b": "final_25d_model.pt",
+    "path_c": "final_3d_model.pt"
+  },
+  "final_calibrator_path": "final_calibrator.joblib",
+  "final_ensemble_path": "final_ensemble.joblib",
+  "feature_columns": [],
+  "note_path_a_removed": "Path A (handcrafted features + XGBoost GBM) was removed from the deployed pipeline: its trained ensemble weight was exactly 0.0 (see final_ensemble.joblib history / project notes), so dropping it does not change any prediction. This also eliminates a hard runtime dependency on the xgboost package."
+}

@@ -1,0 +1,45 @@
+{
+  "n_registered": 1362,
+  "n_registration_failures": 14,
+  "registration_failure_rate": 0.010279001468428781,
+  "registration_runtime_seconds": 625.9879388809204,
+  "feature_columns": [
+    "left_caudate_mean",
+    "right_caudate_mean",
+    "left_putamen_mean",
+    "right_putamen_mean",
+    "reference_mean",
+    "sbr_left_caudate",
+    "sbr_left_putamen",
+    "sbr_right_caudate",
+    "sbr_right_putamen",
+    "asymmetry_index",
+    "putamen_to_caudate_ratio_left",
+    "putamen_to_caudate_ratio_right",
+    "connected_high_uptake_components",
+    "high_uptake_volume_mm3"
+  ],
+  "metrics": {
+    "path_a_registered_xgb": {
+      "log_loss": 0.7235072971674369,
+      "auroc": 0.6038223354121092,
+      "brier": 0.2581113794182753,
+      "sensitivity": 0.570281124497992,
+      "specificity": 0.5739837398373984
+    },
+    "path_a_registered_logreg": {
+      "log_loss": 0.7194774398292465,
+      "auroc": 0.5535551419771225,
+      "brier": 0.2578609451943055,
+      "sensitivity": 0.6572958500669344,
+      "specificity": 0.43089430894308944
+    },
+    "path_a_registered_svm": {
+      "log_loss": 0.6999750346520746,
+      "auroc": 0.5279089256756022,
+      "brier": 0.25271946696347003,
+      "sensitivity": 0.6506024096385542,
+      "specificity": 0.3886178861788618
+    }
+  }
+}
