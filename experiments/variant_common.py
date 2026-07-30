@@ -10,6 +10,7 @@ learning rates for backbone/head fine-tuning.
 from __future__ import annotations
 
 import functools
+import hashlib
 import json
 import random
 import time
@@ -36,6 +37,49 @@ VARIANTS_DIR.mkdir(parents=True, exist_ok=True)
 
 SEED = 42
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+
+# --- MedicalNet pretrained weights: not committed to the repo (132MB,
+# third-party, MIT license) -- fetched on demand and checksum-verified, so
+# this works unmodified on a fresh clone (Colab included), not just on a
+# machine that already has the file cached locally. ---
+MEDICALNET_WEIGHTS_URL = "https://huggingface.co/TencentMedicalNet/MedicalNet-Resnet18/resolve/main/resnet_18_23dataset.pth"
+MEDICALNET_WEIGHTS_SHA256 = "61224f9317fcce873366deb3703183e92cc47325b726b69691b33536244e10f4"
+MEDICALNET_WEIGHTS_PATH = ARTIFACTS_DIR / "pretrained_weights" / "medicalnet_resnet18_23dataset.pth"
+
+
+def sha256_of(path: Path) -> str:
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(1 << 20), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def ensure_medicalnet_weights(path: Path = MEDICALNET_WEIGHTS_PATH, url: str = MEDICALNET_WEIGHTS_URL,
+                               expected_sha256: str = MEDICALNET_WEIGHTS_SHA256) -> Path:
+    """Downloads the real Tencent/MedicalNet ResNet-18 pretrained weights if
+    not already present locally, verifying the checksum before trusting the
+    file. Raises rather than silently continuing on a download failure or
+    checksum mismatch -- never falls back to random-init without saying so."""
+    if path.is_file():
+        return path
+    path.parent.mkdir(parents=True, exist_ok=True)
+    print(f"MedicalNet weights not found at {path} -- downloading from {url} ...", flush=True)
+    import urllib.request
+    tmp_path = path.with_suffix(path.suffix + ".part")
+    try:
+        urllib.request.urlretrieve(url, tmp_path)
+        actual_sha256 = sha256_of(tmp_path)
+        if actual_sha256 != expected_sha256:
+            raise RuntimeError(
+                f"Downloaded MedicalNet weights failed checksum verification: "
+                f"expected {expected_sha256}, got {actual_sha256}. Refusing to use an unverified file.")
+        tmp_path.replace(path)
+    finally:
+        if tmp_path.exists():
+            tmp_path.unlink()
+    print(f"Downloaded and checksum-verified MedicalNet weights -> {path}", flush=True)
+    return path
 
 # --- exact same augmentation / training hyperparameters as the existing
 # Path C cell in dat_scan_full_pipeline.ipynb (CFG["aug"], CFG["lr_3d"], etc.) ---

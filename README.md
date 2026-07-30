@@ -34,8 +34,13 @@ DrivenData DaT Parkinson's Challenge.
   the competition's actual scan data / labels. Not redistributed here;
   source your own copy (see "Running on Colab" below).
 - `artifacts/pretrained_weights/medicalnet_resnet18_23dataset.pth` -- a
-  132MB third-party file (Tencent/MedicalNet, MIT license). Re-download it
-  rather than committing it:
+  132MB third-party file (Tencent/MedicalNet, MIT license). Not committed;
+  `experiments/variant_common.py`'s `ensure_medicalnet_weights()` downloads
+  and checksum-verifies it automatically the first time it's needed (called
+  from both `experiments/run_medicalnet_cv.py` and
+  `model_variants_comparison.ipynb`), so no manual step is required on a
+  fresh clone -- Colab included. To pre-fetch it manually instead (e.g. to
+  cache it on Drive across sessions):
 
   ```bash
   mkdir -p artifacts/pretrained_weights
@@ -76,9 +81,9 @@ DrivenData DaT Parkinson's Challenge.
    thereafter -- put `preproc_cache/` on Drive too if you want it to persist
    across sessions).
 
-3. If you want the MedicalNet variant, fetch its pretrained weights (see
-   above) before running `model_variants_comparison.ipynb` /
-   `experiments/run_medicalnet_cv.py`.
+3. The MedicalNet variant's pretrained weights are fetched automatically
+   (checksum-verified) the first time `model_variants_comparison.ipynb` /
+   `experiments/run_medicalnet_cv.py` needs them -- no manual step required.
 
 4. Open and run `dat_scan_full_pipeline.ipynb` top to bottom (GPU runtime
    recommended: `Runtime > Change runtime type > GPU`). Set `CFG["fast_dev_run"] = True`

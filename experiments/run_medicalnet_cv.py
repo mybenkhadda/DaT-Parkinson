@@ -8,7 +8,6 @@ gradient clipping, best-checkpoint-only).
 """
 from __future__ import annotations
 
-import hashlib
 import json
 import sys
 import time
@@ -20,21 +19,15 @@ import torch
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import variant_common as vc
 
-WEIGHTS_PATH = vc.REPO_ROOT / "artifacts" / "pretrained_weights" / "medicalnet_resnet18_23dataset.pth"
+# Weights are fetched on demand (checksum-verified) by vc.ensure_medicalnet_weights()
+# rather than assumed present -- works on a fresh clone, Colab included.
+WEIGHTS_PATH = vc.MEDICALNET_WEIGHTS_PATH
 BACKBONE_LR = 1e-4   # lower than the head, per the task
 HEAD_LR = 1e-3        # same magnitude as CFG["lr_3d"] used for Path C
 
 
 def log(msg: str) -> None:
     print(f"[{time.strftime('%H:%M:%S')}] {msg}", flush=True)
-
-
-def sha256_of(path: Path) -> str:
-    h = hashlib.sha256()
-    with open(path, "rb") as f:
-        for chunk in iter(lambda: f.read(1 << 20), b""):
-            h.update(chunk)
-    return h.hexdigest()
 
 
 def build_param_groups(model: vc.MedicalNetResNet3D):
@@ -50,7 +43,8 @@ def main():
     folds_df = vc.load_cv_folds()
     n_folds = folds_df["fold"].nunique()
 
-    weight_checksum = sha256_of(WEIGHTS_PATH)
+    vc.ensure_medicalnet_weights(WEIGHTS_PATH)  # downloads + checksum-verifies if not already present
+    weight_checksum = vc.sha256_of(WEIGHTS_PATH)
     provenance = {
         "source_repo": "https://github.com/Tencent/MedicalNet",
         "weight_file": "resnet_18_23dataset.pth",

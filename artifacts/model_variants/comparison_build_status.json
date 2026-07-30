@@ -2,7 +2,7 @@
   "has_registration_variant": true,
   "has_medicalnet_variant": true,
   "has_model_genesis_variant": false,
-  "n_rows": 646,
+  "n_rows": 1035,
   "n_individual_models": 7,
   "n_ensembles": 6
 }
