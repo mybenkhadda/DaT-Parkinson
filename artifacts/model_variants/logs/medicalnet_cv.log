@@ -49,3 +49,10 @@
 [23:57:55]   [MedicalNet fold 2] epoch 06  train_loss=0.4509  val_loss=0.4642  val_auroc=0.8454  (75.6s)  *best*
 [23:59:00]   [MedicalNet fold 2] epoch 07  train_loss=0.4453  val_loss=0.5155  val_auroc=0.8494  (64.8s)
 [00:00:01]   [MedicalNet fold 2] epoch 08  train_loss=0.4320  val_loss=0.4889  val_auroc=0.8340  (61.1s)
+[00:01:03]   [MedicalNet fold 2] epoch 09  train_loss=0.4358  val_loss=0.5909  val_auroc=0.8023  (61.7s)
+[00:02:03]   [MedicalNet fold 2] epoch 10  train_loss=0.4100  val_loss=0.5253  val_auroc=0.8607  (59.8s)
+[00:03:03]   [MedicalNet fold 2] epoch 11  train_loss=0.3967  val_loss=0.6657  val_auroc=0.8453  (59.6s)
+[00:04:04]   [MedicalNet fold 2] epoch 12  train_loss=0.4156  val_loss=0.6063  val_auroc=0.8532  (61.9s)
+[00:04:04]   [MedicalNet fold 2] early stopping at epoch 12 (best=6)
+[00:04:05] Fold 2 done in 840s (best epoch 6, val_loss=0.4642)
+[00:05:06]   [MedicalNet fold 3] epoch 00  train_loss=0.6347  val_loss=0.6360  val_auroc=0.6509  (59.5s)  *best*
