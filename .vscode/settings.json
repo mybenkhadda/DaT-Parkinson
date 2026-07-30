@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "experiments",
+        "submission_src"
+    ]
+}
