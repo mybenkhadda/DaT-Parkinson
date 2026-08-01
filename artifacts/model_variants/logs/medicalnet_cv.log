@@ -81,3 +81,22 @@
 [00:26:51]   [MedicalNet fold 4] epoch 03  train_loss=0.5789  val_loss=0.6788  val_auroc=0.7089  (52.5s)
 [00:27:47]   [MedicalNet fold 4] epoch 04  train_loss=0.5427  val_loss=0.5024  val_auroc=0.7833  (55.1s)  *best*
 [00:28:39]   [MedicalNet fold 4] epoch 05  train_loss=0.5290  val_loss=1.2062  val_auroc=0.7763  (52.8s)
+[00:29:34]   [MedicalNet fold 4] epoch 06  train_loss=0.5226  val_loss=0.4723  val_auroc=0.8489  (54.7s)  *best*
+[00:30:29]   [MedicalNet fold 4] epoch 07  train_loss=0.5069  val_loss=0.4535  val_auroc=0.8393  (54.7s)  *best*
+[00:31:28]   [MedicalNet fold 4] epoch 08  train_loss=0.4728  val_loss=0.5292  val_auroc=0.7685  (59.3s)
+[00:32:27]   [MedicalNet fold 4] epoch 09  train_loss=0.4909  val_loss=0.7393  val_auroc=0.8486  (58.9s)
+[00:33:25]   [MedicalNet fold 4] epoch 10  train_loss=0.4758  val_loss=0.4847  val_auroc=0.8168  (58.1s)
+[00:34:24]   [MedicalNet fold 4] epoch 11  train_loss=0.4296  val_loss=0.5090  val_auroc=0.8539  (58.3s)
+[00:35:22]   [MedicalNet fold 4] epoch 12  train_loss=0.4418  val_loss=0.4696  val_auroc=0.8351  (57.8s)
+[00:36:19]   [MedicalNet fold 4] epoch 13  train_loss=0.4407  val_loss=0.5450  val_auroc=0.8637  (57.5s)
+[00:36:19]   [MedicalNet fold 4] early stopping at epoch 13 (best=7)
+[00:36:19] Fold 4 done in 786s (best epoch 7, val_loss=0.4535)
+[00:36:22] MedicalNet OOF metrics (all 5 folds): {
+  "log_loss": 0.5027946956139513,
+  "auroc": 0.831730172723414,
+  "brier": 0.1676731829201891,
+  "sensitivity": 0.6854082998661312,
+  "specificity": 0.8195121951219512
+}
+[00:36:22] Total training time: 4369s across 5 folds
+[00:36:22] MedicalNet fine-tuning run complete.

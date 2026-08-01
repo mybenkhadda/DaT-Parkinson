@@ -1,0 +1,10 @@
+{
+  "0": {
+    "pretrain_seconds": 354.6940424442291,
+    "finetune_seconds": 1442.007155418396
+  },
+  "1": {
+    "pretrain_seconds": 437.2573561668396,
+    "finetune_seconds": 143169.1398587227
+  }
+}

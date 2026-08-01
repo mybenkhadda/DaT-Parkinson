@@ -1,0 +1,101 @@
+[00:36:28] === Fold 0: self-supervised pretraining on 906 training-only examinations (fold 0's 456 held-out examinations excluded) ===
+[00:36:50]   [Genesis-pretrain fold 0] epoch 00 train_recon=0.03015 val_recon=0.02438 (18.7s)  *best*
+[00:37:08]   [Genesis-pretrain fold 0] epoch 01 train_recon=0.01842 val_recon=0.01866 (17.4s)  *best*
+[00:37:26]   [Genesis-pretrain fold 0] epoch 02 train_recon=0.01643 val_recon=0.02338 (17.9s)
+[00:37:43]   [Genesis-pretrain fold 0] epoch 03 train_recon=0.01467 val_recon=0.02090 (17.7s)
+[00:38:01]   [Genesis-pretrain fold 0] epoch 04 train_recon=0.01429 val_recon=0.01515 (17.8s)  *best*
+[00:38:19]   [Genesis-pretrain fold 0] epoch 05 train_recon=0.01355 val_recon=0.01341 (18.0s)  *best*
+[00:38:37]   [Genesis-pretrain fold 0] epoch 06 train_recon=0.01296 val_recon=0.01419 (17.5s)
+[00:38:54]   [Genesis-pretrain fold 0] epoch 07 train_recon=0.01237 val_recon=0.01289 (17.1s)  *best*
+[00:39:11]   [Genesis-pretrain fold 0] epoch 08 train_recon=0.01243 val_recon=0.01280 (17.0s)  *best*
+[00:39:29]   [Genesis-pretrain fold 0] epoch 09 train_recon=0.01247 val_recon=0.01328 (18.0s)
+[00:39:47]   [Genesis-pretrain fold 0] epoch 10 train_recon=0.01141 val_recon=0.01494 (17.7s)
+[00:40:04]   [Genesis-pretrain fold 0] epoch 11 train_recon=0.01233 val_recon=0.01258 (17.0s)  *best*
+[00:40:21]   [Genesis-pretrain fold 0] epoch 12 train_recon=0.01149 val_recon=0.01356 (17.2s)
+[00:40:38]   [Genesis-pretrain fold 0] epoch 13 train_recon=0.01122 val_recon=0.01398 (17.2s)
+[00:40:56]   [Genesis-pretrain fold 0] epoch 14 train_recon=0.01111 val_recon=0.01223 (18.0s)  *best*
+[00:41:14]   [Genesis-pretrain fold 0] epoch 15 train_recon=0.01080 val_recon=0.01216 (17.6s)  *best*
+[00:41:31]   [Genesis-pretrain fold 0] epoch 16 train_recon=0.01082 val_recon=0.01163 (17.2s)  *best*
+[00:41:48]   [Genesis-pretrain fold 0] epoch 17 train_recon=0.01039 val_recon=0.01138 (17.3s)  *best*
+[00:42:06]   [Genesis-pretrain fold 0] epoch 18 train_recon=0.01062 val_recon=0.01096 (17.3s)  *best*
+[00:42:23]   [Genesis-pretrain fold 0] epoch 19 train_recon=0.01022 val_recon=0.01174 (17.3s)
+[00:42:23] Fold 0 pretraining done in 355s (best val recon loss=0.01096)
+[00:42:23] === Fold 0: fine-tuning classifier from the pretrained encoder ===
+[00:43:16]   [Genesis-finetune fold 0] epoch 00  train_loss=0.6589  val_loss=0.6376  val_auroc=0.7540  (53.3s)  *best*
+[00:44:08]   [Genesis-finetune fold 0] epoch 01  train_loss=0.6454  val_loss=0.6105  val_auroc=0.7506  (52.1s)  *best*
+[00:45:00]   [Genesis-finetune fold 0] epoch 02  train_loss=0.6313  val_loss=0.6150  val_auroc=0.6796  (51.4s)
+[00:45:50]   [Genesis-finetune fold 0] epoch 03  train_loss=0.6314  val_loss=0.5943  val_auroc=0.7579  (50.1s)  *best*
+[00:46:41]   [Genesis-finetune fold 0] epoch 04  train_loss=0.6286  val_loss=0.6032  val_auroc=0.7356  (50.7s)
+[00:47:31]   [Genesis-finetune fold 0] epoch 05  train_loss=0.6082  val_loss=0.5994  val_auroc=0.7562  (50.0s)
+[00:48:20]   [Genesis-finetune fold 0] epoch 06  train_loss=0.6016  val_loss=0.6071  val_auroc=0.7245  (49.8s)
+[00:49:10]   [Genesis-finetune fold 0] epoch 07  train_loss=0.6021  val_loss=0.5690  val_auroc=0.7675  (49.8s)  *best*
+[00:49:58]   [Genesis-finetune fold 0] epoch 08  train_loss=0.5913  val_loss=0.5798  val_auroc=0.7510  (47.6s)
+[00:50:44]   [Genesis-finetune fold 0] epoch 09  train_loss=0.5852  val_loss=0.5683  val_auroc=0.7594  (46.4s)  *best*
+[00:51:32]   [Genesis-finetune fold 0] epoch 10  train_loss=0.5649  val_loss=0.5654  val_auroc=0.7559  (48.3s)  *best*
+[00:52:20]   [Genesis-finetune fold 0] epoch 11  train_loss=0.5592  val_loss=0.5523  val_auroc=0.7679  (47.5s)  *best*
+[00:53:07]   [Genesis-finetune fold 0] epoch 12  train_loss=0.5599  val_loss=0.5530  val_auroc=0.7755  (46.5s)
+[00:53:53]   [Genesis-finetune fold 0] epoch 13  train_loss=0.5449  val_loss=0.5572  val_auroc=0.7717  (46.2s)
+[00:54:38]   [Genesis-finetune fold 0] epoch 14  train_loss=0.5375  val_loss=0.5481  val_auroc=0.7691  (45.1s)  *best*
+[00:55:24]   [Genesis-finetune fold 0] epoch 15  train_loss=0.5365  val_loss=0.5490  val_auroc=0.7795  (46.3s)
+[00:56:13]   [Genesis-finetune fold 0] epoch 16  train_loss=0.5365  val_loss=0.5391  val_auroc=0.7805  (48.7s)  *best*
+[00:57:00]   [Genesis-finetune fold 0] epoch 17  train_loss=0.5151  val_loss=0.5275  val_auroc=0.7980  (46.8s)  *best*
+[00:57:46]   [Genesis-finetune fold 0] epoch 18  train_loss=0.5162  val_loss=0.5521  val_auroc=0.7834  (46.2s)
+[00:58:36]   [Genesis-finetune fold 0] epoch 19  train_loss=0.4955  val_loss=0.5305  val_auroc=0.7857  (50.5s)
+[00:59:25]   [Genesis-finetune fold 0] epoch 20  train_loss=0.5029  val_loss=0.5166  val_auroc=0.8024  (49.0s)  *best*
+[01:00:12]   [Genesis-finetune fold 0] epoch 21  train_loss=0.4947  val_loss=0.5371  val_auroc=0.8076  (46.5s)
+[01:00:58]   [Genesis-finetune fold 0] epoch 22  train_loss=0.4835  val_loss=0.5145  val_auroc=0.8176  (46.5s)  *best*
+[01:01:45]   [Genesis-finetune fold 0] epoch 23  train_loss=0.4985  val_loss=0.6251  val_auroc=0.8141  (47.0s)
+[01:02:32]   [Genesis-finetune fold 0] epoch 24  train_loss=0.4907  val_loss=0.5569  val_auroc=0.8207  (46.9s)
+[01:03:19]   [Genesis-finetune fold 0] epoch 25  train_loss=0.4883  val_loss=0.5345  val_auroc=0.8122  (46.8s)
+[01:04:06]   [Genesis-finetune fold 0] epoch 26  train_loss=0.4676  val_loss=0.5080  val_auroc=0.8204  (47.1s)  *best*
+[01:04:53]   [Genesis-finetune fold 0] epoch 27  train_loss=0.4592  val_loss=0.5751  val_auroc=0.8199  (46.6s)
+[01:05:39]   [Genesis-finetune fold 0] epoch 28  train_loss=0.4545  val_loss=0.4920  val_auroc=0.8266  (45.8s)  *best*
+[01:06:25]   [Genesis-finetune fold 0] epoch 29  train_loss=0.4617  val_loss=0.5094  val_auroc=0.8204  (46.2s)
+[01:06:25] Fold 0 fine-tuning done in 1442s (best epoch 28, val_loss=0.4920)
+[01:06:27] === Fold 1: self-supervised pretraining on 1172 training-only examinations (fold 1's 190 held-out examinations excluded) ===
+[01:06:46]   [Genesis-pretrain fold 1] epoch 00 train_recon=0.02634 val_recon=0.02274 (19.5s)  *best*
+[01:07:07]   [Genesis-pretrain fold 1] epoch 01 train_recon=0.01592 val_recon=0.01528 (20.8s)  *best*
+[01:07:30]   [Genesis-pretrain fold 1] epoch 02 train_recon=0.01373 val_recon=0.01313 (22.5s)  *best*
+[01:07:52]   [Genesis-pretrain fold 1] epoch 03 train_recon=0.01262 val_recon=0.01323 (22.6s)
+[01:08:14]   [Genesis-pretrain fold 1] epoch 04 train_recon=0.01190 val_recon=0.01450 (21.4s)
+[01:08:35]   [Genesis-pretrain fold 1] epoch 05 train_recon=0.01142 val_recon=0.01456 (21.4s)
+[01:08:56]   [Genesis-pretrain fold 1] epoch 06 train_recon=0.00950 val_recon=0.01049 (21.5s)  *best*
+[01:09:18]   [Genesis-pretrain fold 1] epoch 07 train_recon=0.00918 val_recon=0.01076 (21.5s)
+[01:09:40]   [Genesis-pretrain fold 1] epoch 08 train_recon=0.00913 val_recon=0.00925 (21.8s)  *best*
+[01:10:03]   [Genesis-pretrain fold 1] epoch 09 train_recon=0.00897 val_recon=0.00848 (22.7s)  *best*
+[01:10:25]   [Genesis-pretrain fold 1] epoch 10 train_recon=0.00835 val_recon=0.00875 (22.7s)
+[01:10:48]   [Genesis-pretrain fold 1] epoch 11 train_recon=0.00842 val_recon=0.01246 (22.6s)
+[01:11:11]   [Genesis-pretrain fold 1] epoch 12 train_recon=0.00861 val_recon=0.01000 (23.0s)
+[01:11:32]   [Genesis-pretrain fold 1] epoch 13 train_recon=0.00695 val_recon=0.00756 (21.6s)  *best*
+[01:11:54]   [Genesis-pretrain fold 1] epoch 14 train_recon=0.00679 val_recon=0.00750 (21.6s)  *best*
+[01:12:16]   [Genesis-pretrain fold 1] epoch 15 train_recon=0.00658 val_recon=0.00835 (21.7s)
+[01:12:37]   [Genesis-pretrain fold 1] epoch 16 train_recon=0.00649 val_recon=0.00850 (21.5s)
+[01:12:59]   [Genesis-pretrain fold 1] epoch 17 train_recon=0.00639 val_recon=0.00793 (21.6s)
+[01:13:21]   [Genesis-pretrain fold 1] epoch 18 train_recon=0.00560 val_recon=0.00689 (22.2s)  *best*
+[01:13:44]   [Genesis-pretrain fold 1] epoch 19 train_recon=0.00524 val_recon=0.00661 (22.9s)  *best*
+[01:13:44] Fold 1 pretraining done in 437s (best val recon loss=0.00661)
+[01:13:44] === Fold 1: fine-tuning classifier from the pretrained encoder ===
+[01:14:48]   [Genesis-finetune fold 1] epoch 00  train_loss=0.5963  val_loss=1.1238  val_auroc=0.5923  (63.6s)  *best*
+[01:16:17]   [Genesis-finetune fold 1] epoch 01  train_loss=0.5818  val_loss=0.7160  val_auroc=0.6416  (89.2s)  *best*
+[01:17:39]   [Genesis-finetune fold 1] epoch 02  train_loss=0.5725  val_loss=0.7597  val_auroc=0.6718  (82.0s)
+[01:18:59]   [Genesis-finetune fold 1] epoch 03  train_loss=0.5690  val_loss=1.3867  val_auroc=0.6499  (79.9s)
+[16:43:38]   [Genesis-finetune fold 1] epoch 04  train_loss=0.5643  val_loss=0.5977  val_auroc=0.6825  (141878.7s)  *best*
+[16:46:11]   [Genesis-finetune fold 1] epoch 05  train_loss=0.5489  val_loss=0.6726  val_auroc=0.6729  (153.5s)
+[16:48:38]   [Genesis-finetune fold 1] epoch 06  train_loss=0.5414  val_loss=0.5985  val_auroc=0.6980  (146.6s)
+[16:50:53]   [Genesis-finetune fold 1] epoch 07  train_loss=0.5289  val_loss=0.7249  val_auroc=0.7030  (135.0s)
+[16:53:26]   [Genesis-finetune fold 1] epoch 08  train_loss=0.5208  val_loss=0.6617  val_auroc=0.6918  (152.9s)
+[16:56:33]   [Genesis-finetune fold 1] epoch 09  train_loss=0.5104  val_loss=0.6385  val_auroc=0.6764  (187.8s)
+[16:59:53]   [Genesis-finetune fold 1] epoch 10  train_loss=0.4863  val_loss=0.6128  val_auroc=0.6912  (199.6s)
+[16:59:53]   [Genesis-finetune fold 1] early stopping at epoch 10 (best=4)
+[16:59:53] Fold 1 fine-tuning done in 143169s (best epoch 4, val_loss=0.5977)
+[16:59:56] === Fold 2: self-supervised pretraining on 1167 training-only examinations (fold 2's 195 held-out examinations excluded) ===
+[17:00:54]   [Genesis-pretrain fold 2] epoch 00 train_recon=0.02796 val_recon=0.02924 (57.2s)  *best*
+[17:01:51]   [Genesis-pretrain fold 2] epoch 01 train_recon=0.01719 val_recon=0.01805 (57.2s)  *best*
+[17:02:48]   [Genesis-pretrain fold 2] epoch 02 train_recon=0.01502 val_recon=0.01406 (57.3s)  *best*
+[17:03:45]   [Genesis-pretrain fold 2] epoch 03 train_recon=0.01389 val_recon=0.01507 (56.6s)
+[17:04:41]   [Genesis-pretrain fold 2] epoch 04 train_recon=0.01337 val_recon=0.01476 (55.7s)
+[17:05:34]   [Genesis-pretrain fold 2] epoch 05 train_recon=0.01252 val_recon=0.01276 (53.5s)  *best*
+[17:06:28]   [Genesis-pretrain fold 2] epoch 06 train_recon=0.01200 val_recon=0.01469 (53.5s)
+[17:07:20]   [Genesis-pretrain fold 2] epoch 07 train_recon=0.01213 val_recon=0.01292 (52.5s)
+[17:08:12]   [Genesis-pretrain fold 2] epoch 08 train_recon=0.01218 val_recon=0.01480 (52.0s)
+[17:08:57]   [Genesis-pretrain fold 2] epoch 09 train_recon=0.01002 val_recon=0.01166 (45.0s)  *best*
